@@ -1,11 +1,17 @@
 # Guizz Worlds — World Rescue
 
-Este diretório contém a versão estática pronta para publicar no GitHub Pages. A ferramenta processa o arquivo do mundo no navegador.
+Site estático para recuperar a elegibilidade de conquistas em mundos Minecraft Bedrock. O arquivo `.mcworld` é processado localmente no navegador.
 
-## Publicar no GitHub Pages
+- Site: <https://guihjzzz.github.io/guizz-worlds/>
+- Repositório: <https://github.com/Guihjzzz/guizz-worlds>
+- Publicação: GitHub Pages, branch `main`, pasta raiz.
 
-1. Crie um repositório no GitHub e envie **o conteúdo deste diretório** para a raiz da branch de publicação.
-2. Em **Settings → Pages**, escolha **Deploy from a branch**, a branch enviada e **/(root)**.
-3. Salve e aguarde o GitHub Pages publicar o site. O arquivo index.html abre a ferramenta automaticamente.
+## Atualizar o site
 
-O arquivo .nojekyll mantém os recursos do Next em _next/ disponíveis no GitHub Pages. Os caminhos da página e do manifesto são relativos, então funcionam tanto em domínio próprio quanto no endereço de projeto do GitHub Pages.
+Edite os arquivos deste diretório, faça um commit e envie para `main`. O GitHub Pages publica as alterações automaticamente.
+
+O arquivo `.nojekyll` mantém os recursos em `_next/` disponíveis. Os caminhos dos recursos são relativos para funcionar no endereço de projeto do GitHub Pages.
+
+## Domínio próprio
+
+Para usar outro domínio, configure-o em **Settings → Pages → Custom domain** no repositório e ajuste os registros DNS do domínio no provedor responsável.
