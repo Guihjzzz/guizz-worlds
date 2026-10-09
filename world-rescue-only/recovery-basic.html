@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07111e">
+    <title>Guizz | Reparo de conquistas — Bedrock</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./vendor/fflate-0.8.3.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="Guizz World Rescue, início">
+          <img class="brand-logo" src="./assets/minecraft_title.png" alt="Guizz">
+          <span class="brand-signature"><strong>WORLD RESCUE</strong><small>por Guizz</small></span>
+        </a>
+        <span class="edition"><span class="edition-dot"></span>MINECRAFT BEDROCK</span>
+      </header>
+
+      <section class="intro">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>FERRAMENTA LOCAL · POR GUIZZ</p>
+          <h1>Seu mundo de volta <span>ao jogo.</span></h1>
+          <p class="lead">Analise uma cópia exportada do seu mundo Bedrock. Se os motivos encontrados forem reparáveis, o site cria outro arquivo sem substituir o original.</p>
+          <div class="hero-tag"><span class="hero-tag-dot"></span>SEM API · PROCESSAMENTO NO SEU NAVEGADOR</div>
+        </div>
+        <figure class="hero-art">
+          <img class="hero-mascot" src="./assets/capa-guizz.png" alt="Mascote Guizz sobre fundo azul">
+          <figcaption class="art-watermark"><span>GUIZZ</span><small>WORLD RESCUE</small></figcaption>
+        </figure>
+      </section>
+
+      <section class="card upload-card" aria-labelledby="upload-title">
+        <div class="card-heading">
+          <span class="step">01</span>
+          <div>
+            <h2 id="upload-title">Escolha o mundo</h2>
+            <p>Selecione um arquivo .mcworld exportado pelo Minecraft.</p>
+          </div>
+        </div>
+        <label id="dropzone" class="dropzone" for="world-file">
+          <input id="world-file" type="file" accept=".mcworld,application/zip">
+          <span class="upload-icon" aria-hidden="true">↑</span>
+          <strong>Solte o arquivo aqui</strong>
+          <span>ou <span class="browse-link">procure no computador</span></span>
+          <small>O arquivo é processado neste navegador e não é enviado para um servidor.</small>
+        </label>
+        <div id="status" class="status" role="status" aria-live="polite">Aguardando um arquivo .mcworld</div>
+      </section>
+
+      <section id="report-card" class="card report-card hidden" aria-labelledby="report-title">
+        <div class="card-heading">
+          <span class="step">02</span>
+          <div>
+            <h2 id="report-title">Análise do mundo</h2>
+            <p id="world-summary">—</p>
+          </div>
+        </div>
+        <div id="report-content"></div>
+        <div id="action-row" class="action-row hidden">
+          <button id="fix-button" class="primary-button" type="button">Criar cópia corrigida</button>
+          <button id="reset-button" class="secondary-button" type="button">Escolher outro mundo</button>
+        </div>
+        <div id="download-row" class="download-row hidden">
+          <span class="success-mark" aria-hidden="true">✓</span>
+          <span id="download-message">Cópia pronta.</span>
+          <a id="download-link" class="download-button" download>Baixar .mcworld</a>
+        </div>
+      </section>
+
+      <aside class="note">
+        <strong>Importante</strong>
+        <p>Esta ferramenta altera somente os indicadores de elegibilidade no arquivo do mundo. Ela não concede conquistas já perdidas na conta Xbox. Faça uma cópia de segurança antes de importar o resultado. Mundos com experimentos irreversíveis ou bloqueio de template não são alterados.</p>
+      </aside>
+
+      <footer class="footer">
+        <span>Processamento local · sem conta · sem API</span>
+        <span class="footer-brand">GUIZZ <i>·</i> WORLD RESCUE</span>
+      </footer>
+    </main>
+  </body>
+</html>

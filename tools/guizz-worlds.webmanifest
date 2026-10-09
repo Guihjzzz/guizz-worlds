@@ -1,0 +1,23 @@
+{
+  "name": "Guizz Worlds",
+  "short_name": "Guizz Worlds",
+  "description": "Recupere conquistas em mundos Minecraft Bedrock no seu navegador.",
+  "id": "./guizz-world-rescue.html",
+  "start_url": "./guizz-world-rescue.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07111e",
+  "theme_color": "#07111e",
+  "categories": [
+    "games",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "../world-rescue-only/assets/capa-guizz.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+fflate 0.8.3
+Projeto: https://github.com/101arrowz/fflate
+Arquivo incluído: vendor/fflate-0.8.3.js
+Licença: MIT
+
+O texto completo da licença correspondente ao pacote está em:
+vendor/fflate-LICENSE.txt
