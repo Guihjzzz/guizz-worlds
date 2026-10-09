@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://guihjzzz.github.io/guizz-worlds/sitemap.xml

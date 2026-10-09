@@ -199,14 +199,58 @@
     tr: ["Açık modu etkinleştir", "Koyu modu etkinleştir", "Yapay zekâ yardımcısını aç"]
   };
   const DOCUMENT_TITLES = {
-    en: "Guizz Worlds — World Rescue — Minecraft Bedrock achievement recovery", es: "Guizz Worlds — World Rescue — Recuperación de logros de Minecraft Bedrock",
-    fr: "Guizz Worlds — World Rescue — Récupération des succès Minecraft Bedrock", de: "Guizz Worlds — World Rescue — Minecraft-Bedrock-Erfolge wiederherstellen",
-    it: "Guizz Worlds — World Rescue — Recupero obiettivi Minecraft Bedrock", pt: "Guizz Worlds — World Rescue — Recuperação de conquistas do Minecraft Bedrock",
-    ru: "Guizz Worlds — World Rescue — восстановление достижений Minecraft Bedrock", ja: "Guizz Worlds — World Rescue — Minecraft Bedrock の実績を復旧",
-    ko: "Guizz Worlds — World Rescue — Minecraft Bedrock 업적 복구", zh: "Guizz Worlds — World Rescue — Minecraft 基岩版成就恢复",
-    ar: "Guizz Worlds — World Rescue — استعادة إنجازات Minecraft Bedrock", hi: "Guizz Worlds — World Rescue — Minecraft Bedrock उपलब्धियाँ वापस पाएं",
-    nl: "Guizz Worlds — World Rescue — Minecraft Bedrock-prestaties herstellen", pl: "Guizz Worlds — World Rescue — odzyskiwanie osiągnięć Minecraft Bedrock",
-    tr: "Guizz Worlds — World Rescue — Minecraft Bedrock başarılarını kurtarma"
+    en: "Minecraft Bedrock Achievement Recovery | Guizz Worlds",
+    es: "Recuperar logros de Minecraft Bedrock | Guizz Worlds",
+    fr: "Récupérer les succès Minecraft Bedrock | Guizz Worlds",
+    de: "Minecraft-Bedrock-Erfolge wiederherstellen | Guizz Worlds",
+    it: "Recuperare obiettivi Minecraft Bedrock | Guizz Worlds",
+    pt: "Recuperar conquistas do Minecraft Bedrock | Guizz Worlds",
+    ru: "Восстановить достижения Minecraft Bedrock | Guizz Worlds",
+    ja: "Minecraft Bedrockの実績を復元 | Guizz Worlds",
+    ko: "Minecraft Bedrock 업적 복구 | Guizz Worlds",
+    zh: "恢复 Minecraft 基岩版成就 | Guizz Worlds",
+    ar: "استعادة إنجازات Minecraft Bedrock | Guizz Worlds",
+    hi: "Minecraft Bedrock उपलब्धियाँ वापस पाएं | Guizz Worlds",
+    nl: "Minecraft Bedrock-prestaties herstellen | Guizz Worlds",
+    pl: "Odzyskiwanie osiągnięć Minecraft Bedrock | Guizz Worlds",
+    tr: "Minecraft Bedrock başarılarını kurtarma | Guizz Worlds"
+  };
+  const LANGUAGE_URLS = {
+    en: "./guizz-world-rescue-en.html", es: "./guizz-world-rescue-es.html",
+    fr: "./guizz-world-rescue-fr.html", de: "./guizz-world-rescue-de.html",
+    it: "./guizz-world-rescue-it.html", pt: "./guizz-world-rescue.html",
+    ru: "./guizz-world-rescue-ru.html", ja: "./guizz-world-rescue-ja.html",
+    ko: "./guizz-world-rescue-ko.html", zh: "./guizz-world-rescue-zh.html",
+    ar: "./guizz-world-rescue-ar.html", hi: "./guizz-world-rescue-hi.html",
+    nl: "./guizz-world-rescue-nl.html", pl: "./guizz-world-rescue-pl.html",
+    tr: "./guizz-world-rescue-tr.html"
+  };
+  const LANGUAGE_TAGS = {
+    en: "en", es: "es", fr: "fr", de: "de", it: "it", pt: "pt-BR",
+    ru: "ru", ja: "ja", ko: "ko", zh: "zh-Hans", ar: "ar", hi: "hi",
+    nl: "nl", pl: "pl", tr: "tr"
+  };
+  const OPEN_GRAPH_LOCALES = {
+    en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE", it: "it_IT",
+    pt: "pt_BR", ru: "ru_RU", ja: "ja_JP", ko: "ko_KR", zh: "zh_CN",
+    ar: "ar_SA", hi: "hi_IN", nl: "nl_NL", pl: "pl_PL", tr: "tr_TR"
+  };
+  const FAQ_COPY = {
+    en: ["About World Rescue", "Will this change my original world?", "No. World Rescue creates a separate repaired copy and leaves your original file unchanged.", "Does my world leave my device?", "No. The analysis and copy are processed in your browser; the world file is not uploaded to this site.", "Which Minecraft worlds are supported?", "Minecraft Bedrock worlds exported as .mcworld files are supported. Java Edition worlds are not."],
+    es: ["Acerca de World Rescue", "¿Se modificará mi mundo original?", "No. World Rescue crea una copia reparada por separado y deja intacto el archivo original.", "¿Mi mundo sale de mi dispositivo?", "No. El análisis y la copia se procesan en tu navegador; el archivo no se sube a este sitio.", "¿Qué mundos de Minecraft son compatibles?", "Se admiten mundos de Minecraft Bedrock exportados como archivos .mcworld. No se admiten mundos de Java Edition."],
+    fr: ["À propos de World Rescue", "Mon monde original sera-t-il modifié ?", "Non. World Rescue crée une copie réparée distincte et ne modifie pas le fichier original.", "Mon monde quitte-t-il mon appareil ?", "Non. L’analyse et la copie sont traitées dans votre navigateur ; le fichier n’est pas envoyé sur ce site.", "Quels mondes Minecraft sont pris en charge ?", "Les mondes Minecraft Bedrock exportés au format .mcworld sont pris en charge. Les mondes Java Edition ne le sont pas."],
+    de: ["Über World Rescue", "Wird meine Originalwelt verändert?", "Nein. World Rescue erstellt eine separate reparierte Kopie und lässt die Originaldatei unverändert.", "Verlässt meine Welt mein Gerät?", "Nein. Analyse und Kopie werden in deinem Browser verarbeitet; die Weltdatei wird nicht auf diese Website hochgeladen.", "Welche Minecraft-Welten werden unterstützt?", "Unterstützt werden Minecraft-Bedrock-Welten, die als .mcworld-Datei exportiert wurden. Java-Edition-Welten werden nicht unterstützt."],
+    it: ["Informazioni su World Rescue", "Il mio mondo originale verrà modificato?", "No. World Rescue crea una copia riparata separata e lascia invariato il file originale.", "Il mio mondo lascia il dispositivo?", "No. L’analisi e la copia vengono elaborate nel browser; il file del mondo non viene caricato su questo sito.", "Quali mondi di Minecraft sono supportati?", "Sono supportati i mondi Minecraft Bedrock esportati come file .mcworld. I mondi Java Edition non sono supportati."],
+    pt: ["Sobre o World Rescue", "Meu mundo original será alterado?", "Não. O World Rescue cria uma cópia corrigida separada e mantém o arquivo original intacto.", "Meu mundo sai do meu dispositivo?", "Não. A análise e a cópia são processadas no navegador; o arquivo do mundo não é enviado para este site.", "Quais mundos do Minecraft são compatíveis?", "São compatíveis mundos Minecraft Bedrock exportados como arquivo .mcworld. Mundos da Java Edition não são compatíveis."],
+    ru: ["О World Rescue", "Исходный мир будет изменён?", "Нет. World Rescue создаёт отдельную исправленную копию и не меняет исходный файл.", "Мой мир покидает устройство?", "Нет. Анализ и создание копии выполняются в браузере; файл мира не загружается на этот сайт.", "Какие миры Minecraft поддерживаются?", "Поддерживаются миры Minecraft Bedrock, экспортированные в формате .mcworld. Миры Java Edition не поддерживаются."],
+    ja: ["World Rescueについて", "元のワールドは変更されますか？", "いいえ。World Rescueは修復済みのコピーを別に作成し、元のファイルは変更しません。", "ワールドのデータは端末外に送信されますか？", "いいえ。解析とコピーの作成はブラウザー内で行われ、ワールドファイルはこのサイトにアップロードされません。", "対応しているMinecraftのワールドは？", ".mcworldとして書き出したMinecraft Bedrockのワールドに対応しています。Java Editionのワールドには対応していません。"],
+    ko: ["World Rescue 안내", "원본 월드가 변경되나요?", "아니요. World Rescue는 별도의 복구 사본을 만들며 원본 파일은 그대로 둡니다.", "월드 파일이 기기 밖으로 전송되나요?", "아니요. 분석과 사본 생성은 브라우저에서 처리되며 월드 파일은 이 사이트에 업로드되지 않습니다.", "어떤 Minecraft 월드를 지원하나요?", ".mcworld 파일로 내보낸 Minecraft Bedrock 월드를 지원합니다. Java Edition 월드는 지원하지 않습니다."],
+    zh: ["关于 World Rescue", "原始世界会被修改吗？", "不会。World Rescue 会另行创建修复后的副本，原始文件保持不变。", "世界文件会离开我的设备吗？", "不会。分析和副本创建都在浏览器中进行；世界文件不会上传到本网站。", "支持哪些 Minecraft 世界？", "支持导出为 .mcworld 文件的 Minecraft 基岩版世界。不支持 Java 版世界。"],
+    ar: ["حول World Rescue", "هل سيتغير عالمي الأصلي؟", "لا. ينشئ World Rescue نسخة مُصلحة منفصلة ويترك الملف الأصلي دون تغيير.", "هل يغادر عالمي جهازي؟", "لا. تتم معالجة التحليل والنسخة في المتصفح، ولا يُرفع ملف العالم إلى هذا الموقع.", "ما عوالم Minecraft المدعومة؟", "ندعم عوالم Minecraft Bedrock المُصدّرة بصيغة .mcworld. عوالم Java Edition غير مدعومة."],
+    hi: ["World Rescue के बारे में", "क्या मेरी मूल दुनिया बदलेगी?", "नहीं। World Rescue एक अलग सुधारी हुई कॉपी बनाता है और मूल फ़ाइल को नहीं बदलता।", "क्या मेरी दुनिया मेरे डिवाइस से बाहर जाती है?", "नहीं। विश्लेषण और कॉपी आपके ब्राउज़र में होती है; दुनिया की फ़ाइल इस साइट पर अपलोड नहीं होती।", "Minecraft की कौन-सी दुनिया समर्थित हैं?", ".mcworld फ़ाइल के रूप में निर्यात की गई Minecraft Bedrock दुनिया समर्थित हैं। Java Edition दुनिया समर्थित नहीं हैं."],
+    nl: ["Over World Rescue", "Verandert mijn oorspronkelijke wereld?", "Nee. World Rescue maakt een aparte herstelde kopie en laat het oorspronkelijke bestand ongewijzigd.", "Verlaat mijn wereld mijn apparaat?", "Nee. De analyse en kopie worden in je browser verwerkt; het wereldbestand wordt niet naar deze site geüpload.", "Welke Minecraft-werelden worden ondersteund?", "Minecraft Bedrock-werelden die als .mcworld-bestand zijn geëxporteerd, worden ondersteund. Java Edition-werelden niet."],
+    pl: ["O World Rescue", "Czy mój oryginalny świat zostanie zmieniony?", "Nie. World Rescue tworzy osobną naprawioną kopię, a oryginalny plik pozostaje bez zmian.", "Czy mój świat opuszcza urządzenie?", "Nie. Analiza i tworzenie kopii odbywają się w przeglądarce; plik świata nie jest przesyłany do tej witryny.", "Jakie światy Minecraft są obsługiwane?", "Obsługiwane są światy Minecraft Bedrock wyeksportowane jako pliki .mcworld. Światy Java Edition nie są obsługiwane."],
+    tr: ["World Rescue hakkında", "Orijinal dünyam değişir mi?", "Hayır. World Rescue ayrı bir onarılmış kopya oluşturur ve orijinal dosyayı değiştirmez.", "Dünyam cihazımdan ayrılır mı?", "Hayır. Analiz ve kopya tarayıcınızda işlenir; dünya dosyası bu siteye yüklenmez.", "Hangi Minecraft dünyaları destekleniyor?", ".mcworld dosyası olarak dışa aktarılan Minecraft Bedrock dünyaları desteklenir. Java Edition dünyaları desteklenmez."]
   };
   const HOME_LABELS = {
     en: "Guizz Worlds home", es: "Inicio de Guizz Worlds", fr: "Accueil de Guizz Worlds", de: "Guizz Worlds-Startseite",
@@ -283,10 +327,18 @@
   };
 
   let language = "pt";
-  try {
-    const saved = localStorage.getItem("preferred-language");
-    if (COPY[saved]) language = saved;
-  } catch (_) {}
+  const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+  const pageLanguage = document.documentElement.dataset.defaultLanguage;
+  if (COPY[requestedLanguage]) {
+    language = requestedLanguage;
+  } else if (COPY[pageLanguage]) {
+    language = pageLanguage;
+  } else {
+    try {
+      const saved = localStorage.getItem("preferred-language");
+      if (COPY[saved]) language = saved;
+    } catch (_) {}
+  }
 
   function t(key) {
     const index = KEYS.indexOf(key);
@@ -367,20 +419,41 @@
     const socialCopy = SOCIAL_COPY[language] || SOCIAL_COPY.en;
     const siteSectionCopy = SITE_SECTION_COPY[language] || SITE_SECTION_COPY.en;
     const socialLinkLabels = SOCIAL_LINK_LABELS[language] || SOCIAL_LINK_LABELS.en;
-    document.documentElement.lang = language;
+    const faqCopy = FAQ_COPY[language] || FAQ_COPY.en;
+    const canonicalUrl = new URL(LANGUAGE_URLS[language] || LANGUAGE_URLS.en, window.location.href).href;
+    document.documentElement.lang = LANGUAGE_TAGS[language] || language;
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
     document.title = DOCUMENT_TITLES[language] || DOCUMENT_TITLES.en;
     const localizedDescription = t("subtitle") + " " + t("uploadHelp");
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.rel = "canonical";
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.href = canonicalUrl;
     [
       ['meta[name="description"]', localizedDescription],
       ['meta[property="og:title"]', document.title],
       ['meta[property="og:description"]', localizedDescription],
+      ['meta[property="og:url"]', canonicalUrl],
+      ['meta[property="og:locale"]', OPEN_GRAPH_LOCALES[language] || OPEN_GRAPH_LOCALES.en],
       ['meta[name="twitter:title"]', document.title],
       ['meta[name="twitter:description"]', localizedDescription]
     ].forEach(function (entry) {
       const meta = document.querySelector(entry[0]);
       if (meta) meta.setAttribute("content", entry[1]);
     });
+    const applicationSchema = document.getElementById("guizz-world-rescue-schema");
+    if (applicationSchema) {
+      try {
+        const schema = JSON.parse(applicationSchema.textContent);
+        schema.url = canonicalUrl;
+        schema.description = localizedDescription;
+        schema.inLanguage = LANGUAGE_TAGS[language] || language;
+        applicationSchema.textContent = JSON.stringify(schema);
+      } catch (_) {}
+    }
     const homeLink = document.querySelector(".nav-logo");
     if (homeLink) homeLink.setAttribute("aria-label", HOME_LABELS[language] || HOME_LABELS.en);
     if (notificationRegion) notificationRegion.setAttribute("aria-label", NOTIFICATION_LABELS[language] || NOTIFICATION_LABELS.en);
@@ -430,6 +503,11 @@
       if (heading) heading.textContent = t("why");
       if (paragraph) paragraph.textContent = t("whyText");
     }
+    const faqTitle = document.getElementById("faq-title");
+    if (faqTitle) faqTitle.textContent = faqCopy[0];
+    document.querySelectorAll("[data-faq-copy]").forEach(function (node, index) {
+      node.textContent = faqCopy[index + 1] || "";
+    });
     document.querySelectorAll(".nav-cta span").forEach(function (node) {
       const labels = CTA_COPY[language] || CTA_COPY.en;
       node.textContent = node.classList.contains("min-[430px]:inline") ? labels[0] : labels[1];
@@ -512,6 +590,11 @@
       try {
         localStorage.setItem("preferred-language", next);
         localStorage.setItem("guizz-world-rescue-language-set", "1");
+      } catch (_) {}
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.set("lang", next);
+        window.history.replaceState(window.history.state, "", url);
       } catch (_) {}
       applyLanguage();
     }
