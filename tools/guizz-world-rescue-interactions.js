@@ -215,6 +215,23 @@
     pl: "Odzyskiwanie osiągnięć Minecraft Bedrock | Guizz Worlds",
     tr: "Minecraft Bedrock başarılarını kurtarma | Guizz Worlds"
   };
+  const DOCUMENT_DESCRIPTIONS = {
+    en: "Restore Minecraft Bedrock achievements after cheats or Creative mode. Analyze an exported .mcworld file in your browser and download a repaired copy; the original stays unchanged.",
+    es: "Recupera los logros de Minecraft Bedrock tras usar trucos o el modo Creativo. Analiza un archivo .mcworld en tu navegador y descarga una copia reparada; el original queda intacto.",
+    fr: "Récupérez les succès Minecraft Bedrock après l’utilisation de commandes ou du mode Créatif. Analysez un fichier .mcworld dans votre navigateur et téléchargez une copie réparée ; l’original reste intact.",
+    de: "Stelle Minecraft-Bedrock-Erfolge nach Cheats oder dem Kreativmodus wieder her. Analysiere eine .mcworld-Datei im Browser und lade eine reparierte Kopie herunter; das Original bleibt unverändert.",
+    it: "Recupera gli obiettivi di Minecraft Bedrock dopo aver usato trucchi o la modalità Creativa. Analizza un file .mcworld nel browser e scarica una copia riparata; l’originale resta intatto.",
+    pt: "Recupere conquistas do Minecraft Bedrock após usar comandos ou o modo Criativo. Analise um arquivo .mcworld no navegador e baixe uma cópia corrigida; o original fica intacto.",
+    ru: "Восстановите достижения Minecraft Bedrock после использования команд или творческого режима. Проверьте файл .mcworld в браузере и скачайте исправленную копию; исходный файл останется без изменений.",
+    ja: "チートやクリエイティブモードを使ったMinecraft Bedrockワールドの実績を復元します。.mcworldファイルをブラウザーで確認し、元のファイルを保ったまま修復コピーをダウンロードできます。",
+    ko: "치트나 크리에이티브 모드를 사용한 Minecraft Bedrock 월드의 업적을 복구하세요. 브라우저에서 .mcworld 파일을 분석하고 원본은 그대로 둔 채 복구 사본을 다운로드할 수 있습니다.",
+    zh: "恢复使用过作弊或创造模式的 Minecraft 基岩版世界成就。在浏览器中分析 .mcworld 文件并下载修复副本，原始文件保持不变。",
+    ar: "استعد إنجازات عوالم Minecraft Bedrock بعد استخدام الأوامر أو الوضع الإبداعي. حلّل ملف ‎.mcworld في المتصفح ونزّل نسخة مُصلحة مع إبقاء الملف الأصلي كما هو.",
+    hi: "चीट या क्रिएटिव मोड के बाद Minecraft Bedrock उपलब्धियाँ वापस पाएं। ब्राउज़र में .mcworld फ़ाइल जाँचें और मूल फ़ाइल को बदले बिना सुधारी हुई कॉपी डाउनलोड करें।",
+    nl: "Herstel Minecraft Bedrock-prestaties na cheats of de creatieve modus. Controleer een .mcworld-bestand in je browser en download een herstelde kopie; het origineel blijft intact.",
+    pl: "Odzyskaj osiągnięcia Minecraft Bedrock po użyciu komend lub trybu kreatywnego. Przeanalizuj plik .mcworld w przeglądarce i pobierz naprawioną kopię; oryginał pozostanie bez zmian.",
+    tr: "Hile veya Yaratıcı mod sonrasında Minecraft Bedrock başarılarını geri kazanın. .mcworld dosyasını tarayıcıda inceleyip onarılmış bir kopya indirin; orijinal dosya değişmeden kalır."
+  };
   const LANGUAGE_URLS = {
     en: "./guizz-world-rescue-en.html", es: "./guizz-world-rescue-es.html",
     fr: "./guizz-world-rescue-fr.html", de: "./guizz-world-rescue-de.html",
@@ -424,7 +441,7 @@
     document.documentElement.lang = LANGUAGE_TAGS[language] || language;
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
     document.title = DOCUMENT_TITLES[language] || DOCUMENT_TITLES.en;
-    const localizedDescription = t("subtitle") + " " + t("uploadHelp");
+    const localizedDescription = DOCUMENT_DESCRIPTIONS[language] || DOCUMENT_DESCRIPTIONS.en;
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement("link");
